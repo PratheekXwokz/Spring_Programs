@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.xworkz.tv.Tv">
+	<constructor-arg name="name" value="LED TV"></constructor-arg>
+	<constructor-arg name="brand" value="Mi"></constructor-arg>
+	<constructor-arg name="price" value="25000"></constructor-arg>
+	<constructor-arg name="display" ref="N"></constructor-arg>
+	<constructor-arg name="remote" ref="V"></constructor-arg>
+	<constructor-arg name="box" ref="P"></constructor-arg>
+	<constructor-arg name="stand" ref="B"></constructor-arg>
+	</bean>
+
+	<bean class="com.xworkz.tv.Display" id="N">
+	<constructor-arg name="type" value="OLED"></constructor-arg>
+	</bean>
+	<bean class="com.xworkz.tv.Remote" id="V">
+	<constructor-arg name="type" value="Infra Red"></constructor-arg>
+	</bean>
+	<bean class="com.xworkz.tv.SetUpBox" id="P">
+	<constructor-arg name="brand" value="Dish Tv"></constructor-arg>
+	</bean>
+	
+	<bean class="com.xworkz.tv.Stand" id="B">
+	<constructor-arg name="material" value="wood"></constructor-arg>
+	</bean>
+</beans>
