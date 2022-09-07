@@ -1,5 +1,8 @@
 package com.xworkz.tv;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Tv {
 	private String name;
 	private String brand;
@@ -9,6 +12,9 @@ public class Tv {
 	private SetUpBox box;
 	private Stand stand;
 	
+	public Tv() {
+		System.out.println("This is a Brand new Tv");
+	}
 	
 	
 	public Tv(String name, String brand, double price, Display display, Remote remote, SetUpBox box, Stand stand) {

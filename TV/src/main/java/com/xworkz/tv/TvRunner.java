@@ -7,10 +7,9 @@ public class TvRunner {
 
 	public static void main(String[] args) {
 
-		ApplicationContext container = new ClassPathXmlApplicationContext("configure.xml");
+		ApplicationContext container = new ClassPathXmlApplicationContext("config.xml");
 		System.out.println(container);
-		Tv tv = container.getBean(Tv.class);
-		System.out.println(tv);
-		System.out.println(tv.getDisplay().getType());
+		//Tv tv = container.getBean(Tv.class);
+		//System.out.println(tv);
 	}
 }
