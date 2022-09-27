@@ -12,6 +12,7 @@ import com.xworkz.nirmala.dao.NirmalaDAOImpl;
 import com.xworkz.nirmala.entity.NirmalaEntity;
 
 public class NirmalaServiceImpl implements NirmalaService {
+	
 	NirmalaDAO nirmalaDAO = new NirmalaDAOImpl();
 
 	public Boolean validateAndSave(NirmalaEntity entity) {
