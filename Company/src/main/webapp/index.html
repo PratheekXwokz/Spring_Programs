@@ -1,0 +1,33 @@
+<html>
+<body>
+<h1>Company Details</h1>
+<a href="details">Show the Company Details</a>
+<br>
+<form action="company" method="post">
+Company Name<input type="text" id="name" name="name">
+<br><br>
+Founder<input type="text" id="founder" name="founder">
+<br><br>
+Since<input type="text" id="since" name="since">
+<br><br>
+Employees<select id="employees" name="employees">
+<option value="0-25">0-25</option>
+<option value="25-100">25-100</option>
+<option value="100-1000">100-1000</option>
+<option value=">1000">>1000</option>
+</select>
+<br><br>
+Address<textarea id="address" name="address" rows="4" cols="50"></textarea>
+<br><br>
+Business<select id="business" name="business">
+<option value="IT">IT</option>
+<option value="Banking">Banking</option>
+<option value="Construction">Construction</option>
+<option value="Automotive">Automotive</option>
+<option value="SemiConductor">SemiConductor</option>
+</select>
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
