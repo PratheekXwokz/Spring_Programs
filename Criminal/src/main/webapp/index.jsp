@@ -55,8 +55,8 @@ Other:<input type="radio" name="gender" value="Others"/>
 <br>
 International:
 <br>
-Yes<input type="radio" name="internatinal" value="Yes"/>
-No<input type="radio" name="internatinal" value="No"/>
+Yes<input type="radio" name="international" value="Yes"/>
+No<input type="radio" name="international" value="No"/>
 <br><br>
 Married:
 <br>

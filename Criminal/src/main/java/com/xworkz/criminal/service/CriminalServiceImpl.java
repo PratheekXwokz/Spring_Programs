@@ -28,7 +28,6 @@ public class CriminalServiceImpl implements CriminalService {
 	@Override
 	public List<CriminalDTO> findAll() {
 		System.out.println("Running findAll in service");
-		List<CriminalDTO> find = criminalDAO.findAll();
 		return criminalDAO.findAll();
 	}
 
