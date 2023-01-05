@@ -8,5 +8,7 @@ public interface CriminalDAO {
 	void save(CriminalDTO criminal);
 
 	List<CriminalDTO> findAll();
+	List<CriminalDTO> findByName(String name);
+	List<CriminalDTO> findByNameAndGender(String name,String gender);
 
 }

@@ -2,8 +2,10 @@
 <html>
 <body>
 <a href="criminal">Criminal Details</a><br><br>
+<a href="DisplayByName.jsp">Search By Name</a><br><br>
+<a href="DisplayByNameAndGender.jsp">Search By Name And Gender</a><br><br>
 Status:${message}
-<form action="criminal" method="post">
+<form action="criminal" method="post" enctype="multipart/form-data">
 Name<input type="text" name="name"/><br><br>
 Age<select name="age">
 <option>select</option>
@@ -74,6 +76,7 @@ Right Hand Name<input type="text" name="rightHandName"><br><br>
 Left Hand Name<input type="text" name="leftHandName"><br><br>
 Prison<input type="text" name="prisonName"><br><br>
 Net Worth<input type="text" name="netWorth"><br><br>
+<input type="file" name="image"/>
 <input type="submit" value="Save record">
 </form>
 </body>

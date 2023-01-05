@@ -45,8 +45,8 @@ public class DBConfiguration {
 		System.out.println("created datasource");
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/milkshop");
-		dataSource.setPassword("133998");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/xworkz");
+		dataSource.setPassword("13398");
 		dataSource.setUsername("root");
 		return dataSource;
 	}

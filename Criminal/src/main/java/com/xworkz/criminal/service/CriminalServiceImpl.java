@@ -31,4 +31,27 @@ public class CriminalServiceImpl implements CriminalService {
 		return criminalDAO.findAll();
 	}
 
+	@Override
+	public List<CriminalDTO> findByName(String name) {
+		if (name != null && name.length() > 3) {
+			System.out.println("Running findByName in Service");
+			return criminalDAO.findByName(name);
+		} else {
+			System.out.println("Invalid name");
+		}
+		return null;
+	}
+
+	@Override
+	public List<CriminalDTO> findByNameAndGender(String name, String gender) {
+		if (name != null && name.length() > 3 && gender !=null) {
+			System.out.println("Running findByName And Gender in Service");
+			return criminalDAO.findByNameAndGender(name, gender);
+		} else {
+			System.out.println("Invalid Name and Age");
+		}
+
+		return null;
+	}
+
 }

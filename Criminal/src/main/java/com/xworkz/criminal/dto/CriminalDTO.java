@@ -13,8 +13,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Entity
 @Table(name = "criminal_details")
-@NamedQueries (
-		{@NamedQuery(name="findAll", query="select criminal from CriminalDTO criminal")})
+@NamedQueries({ @NamedQuery(name = "findAll", query = "select criminal from CriminalDTO criminal"),
+		@NamedQuery(name = "findByName", query = "select criminal from CriminalDTO criminal where criminal.name=:nm"),
+		@NamedQuery(name="findByNameAndGender",query="select criminal from CriminalDTO criminal where criminal.name=:nm and criminal.gender=:ge")})
 public class CriminalDTO {
 
 	@Id

@@ -20,8 +20,8 @@ import lombok.ToString;
 
 public class NirmalaEntity extends BasicEntity {
 	@Id
-	@GenericGenerator(name = "boss", strategy = "increment")
-	@GeneratedValue(generator = "boss")
+	@GenericGenerator(name = "auto", strategy = "increment")
+	@GeneratedValue(generator = "auto")
 	@Min(value = 1)
 	private Integer id;
 	 @NotNull

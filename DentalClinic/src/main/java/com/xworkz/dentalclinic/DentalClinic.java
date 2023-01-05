@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class DentalClinic {
 	@Value("${name}")
 	private String name;
-	@Value("{doctorName}")
+	@Value("${doctorName}")
 	private String doctorName;
 	private Integer consultingFees;
 	
@@ -25,10 +25,10 @@ public class DentalClinic {
 		this.name = name;
 	}
 	
-	@Value("Dr. Laksith Biddappa")
-	public void setDoctorName(String doctorName) {
-		this.doctorName = doctorName;
-	}
+//	@Value("Dr. Laksith Biddappa")
+//	public void setDoctorName(String doctorName) {
+//		this.doctorName = doctorName;
+//	}
 
 	@Value("500")
 	public void setConsultingFees(Integer consultingFees) {

@@ -1,5 +1,10 @@
 package com.xworkz.criminal.configuration;
 
+import java.io.File;
+
+import javax.servlet.MultipartConfigElement;
+import javax.servlet.ServletRegistration;
+
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -38,4 +43,17 @@ public class SpringMvcInitializer extends AbstractAnnotationConfigDispatcherServ
 		System.out.println("Calling configureDefaultServletHandling Method");
 		configurer.enable();
 	}
+
+	@Override
+	protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+		System.out.println("Creating file Upload Customizer");
+		// files uploaded will be saved here
+		File upload = new File("E:/temp-files");
+
+		// register a multipartconfigElement
+		MultipartConfigElement multipartConfigElement = new MultipartConfigElement(upload.getAbsolutePath(), 100000,
+				100000 * 2, 100000 / 2);
+		registration.setMultipartConfig(multipartConfigElement);
+	}
+
 }
